@@ -37,6 +37,11 @@ public class MethodsExercises {
         else{
             System.out.println("Invalid");
         }
+        System.out.println(getInteger(1, 10));
+        System.out.print("Enter a number to find a factorial for it: ");
+        int number = scan.nextInt();
+        int fact = factorial(number);
+        System.out.println("Factorial of " + number + " is: " + fact);
     }
     public static String addition(int num1, int num2){
         int sum = num1 + num2;
@@ -53,5 +58,24 @@ public class MethodsExercises {
     public static String division(int num1, int num2){
         int qot = num1 / num2;
         return (num1 + " / " + num2 + " = " + qot);
+    }
+    public static String getInteger(int min, int max){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter a number between " + min + " and " + max + ": ");
+        int userInput = scan.nextInt();
+        String pass = "This is valid";
+        if (userInput >= min && userInput <= max){
+             return pass;
+        }
+        System.out.println("This number is invalid");
+        return getInteger(1, 10);
+    }
+    public static int factorial(int num){
+        if (num == 0){
+            return 1;
+        }
+        else{
+            return (num *factorial(num-1));
+        }
     }
 }
