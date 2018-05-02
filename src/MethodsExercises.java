@@ -48,6 +48,9 @@ public class MethodsExercises {
         int number = scan.nextInt();
         int fact = factorial(number);
         System.out.println("Factorial of " + number + " is: " + fact);
+        System.out.print("Enter how many sides you want on the dice: ");
+        int side = scan.nextInt();
+        System.out.println(diceRoll(side));
     }
 
     private static String addition(int num1, int num2) {
@@ -88,5 +91,17 @@ public class MethodsExercises {
         } else {
             return (num * factorial(num - 1));
         }
+    }
+
+    private static String diceRoll(int sides) {
+        long total;
+        long roll1 = random(sides);
+        long roll2 = random(sides);
+        total = roll1 + roll2;
+        return "Your first roll was " + roll1 + ", your second roll was " + roll2 + ", for a total of " + total;
+    }
+
+    private static long random(int num) {
+        return Math.round(Math.random() * (num + 1));
     }
 }
