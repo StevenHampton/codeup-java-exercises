@@ -102,6 +102,6 @@ public class MethodsExercises {
     }
 
     private static long random(int num) {
-        return Math.round(Math.random() * (num + 1));
+        return (int) (Math.random() * num) + 1;
     }
 }
