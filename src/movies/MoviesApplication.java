@@ -21,7 +21,7 @@ public class MoviesApplication {
             return;
         }
         if (choice == 1){
-            category = "All Movies";
+            category = "animated drama horror scifi";
         }
         if (choice == 2){
             category = "animated";
@@ -36,6 +36,5 @@ public class MoviesApplication {
             category = "scifi";
         }
         System.out.println(category);
-
     }
 }

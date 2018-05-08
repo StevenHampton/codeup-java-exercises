@@ -7,7 +7,7 @@ public class ServerNameGenerator {
         System.out.println(part1 + "-" + part2);
     }
     private static String[] nouns = {"Large", "Small", "Gigantic", "Smelly", "Pretty", "Crazy", "Hungry", "Angry", "Nice", "Pleasant"};
-    private static String[] adj = {"Bill", "Cat", "House", "Turnip", "Luis", "Grandpa", "Weasel", "Power Ranger", "Ghost", "Towel"};
+    private static String[] adj = {"Ryan", "Cat", "House", "Turnip", "Luis", "Grandpa", "Weasel", "Power Ranger", "Ghost", "Towel"};
     public static String picker(String[] arr){
         Random num = new Random();
         int i = num.nextInt(9) + 1;
