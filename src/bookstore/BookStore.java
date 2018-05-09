@@ -9,7 +9,6 @@ public class BookStore {
         String name = scan.nextLine();
         System.out.print("How many books has he written? ");
         int books = scan.nextInt();
-        String author1 = new Author(name, books);
-        System.out.println();
+        System.out.println(new Person(name, books));
     }
 }

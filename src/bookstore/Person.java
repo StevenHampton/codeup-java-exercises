@@ -6,6 +6,7 @@ public class Person {
     Person(){}
     public Person(String name) {
         this.name = name;
+        System.out.println("Person: ");
     }
 
     public String getName() {
@@ -16,6 +17,6 @@ public class Person {
         this.name = name;
     }
     public Person(String name, int books){
-
-    };
+        System.out.println("Author: " + name + ", books:" + books);
+    }
 }
