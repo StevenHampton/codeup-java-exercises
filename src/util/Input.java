@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Input {
     // option 1) Inline the assignment
     // private Scanner scanner = new Scanner(System.in);  // = null
-    private  Scanner scanner;
+    private Scanner scanner;
 
     // option 2 -> Create a constructor
     public Input() {
@@ -33,27 +33,41 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
+        System.out.println("Enter an integer between " + min + " and " + max);
         int value = getInt();
         if (value < min || value > max) {
-            System.out.printf("Enter a number between %d and %d%n", min, max);
             return getInt(min, max);
         }
         return value;
     }
+
     public int getInt() {
-        return scanner.nextInt();
+        String input = getString();
+        try{
+            return Integer.valueOf(input);
+        }catch (NumberFormatException e){
+            System.out.println("Must input an integer.");
+            return getInt();
+        }
     }
+
     public double getDouble(double min, double max) {
+        System.out.println("Enter a number between " + min + " and " + max);
         double value = getDouble();
         if (value < min || value > max) {
-            System.out.printf("Enter a number between %f and %f%n", min, max);
             return getDouble(min, max);
         }
         return value;
     }
+
     public double getDouble() {
-        double number = scanner.nextDouble();
-        return number;
+        String input = getString();
+        try{
+            return Double.valueOf(input);
+        }catch (NumberFormatException e){
+            System.out.println("Must input an number.");
+            return getDouble();
+        }
     }
 
 }
